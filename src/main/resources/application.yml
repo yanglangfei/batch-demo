@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.105.12:3306/batch?useSSL=false&serverTimeZone=GMT%2B8&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+  batch:
+    schema: classpath:/org/springframework/batch/core/schema-mysql.sql
+    initialize-schema: always    # 是否初始化表
+  #  job:
+  #    names: parentJob   # 指定 需要启动 的  job 名称  demo5
+    job:
+      enabled: false  # 默认job 是自动执行的
